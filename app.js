@@ -18,6 +18,9 @@ const app= express();
 //middlewares
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(cors(
+    "origin":"https://ecommerce-mern-frontend-coral.vercel.app"
+))
 
 //routes
 app.use("/api/v1/auth", authRoute);
